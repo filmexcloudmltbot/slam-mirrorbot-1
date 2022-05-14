@@ -45,8 +45,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
-    buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
+    buttons.buildbutton("📌My Owner📌", "https://t.me/Dark_LordSL")
+    buttons.buildbutton("Powered By Fιlмeх Cloυd", "https://t.me/FilmexCloud")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
+            'Hi, I am the official mirror-leech bot of Fιlмeх Cloυd.<b>Since You Are Not An Admin You Cannot Use Me 🤒</b>.',
             context.bot,
             update,
             reply_markup,
@@ -162,27 +162,16 @@ help = Telegraph(access_token=telegraph_token).create_page(
 
 help_string = f'''
 /{BotCommands.PingCommand}: Check how long it takes to Ping the Bot
-
 /{BotCommands.AuthorizeCommand}: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
 /{BotCommands.UnAuthorizeCommand}: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
 /{BotCommands.AuthorizedUsersCommand}: Show authorized users (Only Owner & Sudo)
-
 /{BotCommands.AddSudoCommand}: Add sudo user (Only Owner)
-
 /{BotCommands.RmSudoCommand}: Remove sudo users (Only Owner)
-
 /{BotCommands.RestartCommand}: Restart the bot
-
 /{BotCommands.LogCommand}: Get a log file of the bot. Handy for getting crash reports
-
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
-
 /{BotCommands.ShellCommand}: Run commands in Shell (Only Owner)
-
 /{BotCommands.ExecHelpCommand}: Get help for Executor module (Only Owner)
-
 /{BotCommands.TsHelpCommand}: Get help for Torrent search module
 '''
 
